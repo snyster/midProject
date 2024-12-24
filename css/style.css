@@ -1,0 +1,216 @@
+header {
+  background-color: #2c3034;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+}
+header h1 {
+  font-size: 2.5rem; /* שינוי גודל הכותרת */
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
+
+body{
+  background-color: #2c3034;
+  background-size: cover;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.card img {
+  max-height: 200px; /* הגבלה על גובה התמונה */
+  object-fit: contain; /* מונע מתיחה */
+  margin-bottom: 10px; /* הפרדה בין התמונה לטקסט */
+  border-radius: 25px;
+}
+.card .card-title {
+  font-size: 2rem; /* גודל כותרת קטן יותר */
+}
+.card .card-text {
+  font-size: 1.3rem; /* גודל טקסט קטן */
+}
+.card-body {
+  padding: 8px; /* הקטנת הפדינג הכללי */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-body h3{
+  margin-bottom: 20px;
+  font-size: 14pt;
+  text-align: center;
+}
+
+.btn {
+  font-size: 0.8rem; /* כפתור קטן יותר */
+  padding: 5px 10px;
+} 
+
+video, img, canvas{
+  max-width: 100%;
+}
+
+.red{
+  color: red;
+}
+/* סידור הכרטיסים */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* מוודא שהכפתורים בתחתית */
+  align-items: center;
+  background-color: #1f2225;
+  width: 90%;
+  min-width: 200px;
+  max-width: 400px;
+  margin:10px auto;
+  border-radius: 10px;
+  border:none;
+  text-align: center;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  position: relative; /* כדי שכל כרטיס יהיה בעל שכבה משלו */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* אפקט אנימציה חלקה */
+  z-index: 1; /* ברירת מחדל לכל הכרטיסים */
+}
+/* עיצוב שורת הניווט */
+.navbar {
+  background-color: #2c3034; /* אותו צבע כמו הרקע */
+  box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.4);
+}
+
+.navbar .nav-link {
+  color: #ffffff; /* טקסט לבן */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease; /* אפקט עדין */
+}
+
+.navbar .nav-link:hover {
+  color: #007bff; /* כחול בהיר בהובר */
+  background-color: #1f2225; /* רקע כהה קל */
+}
+.nav-link i {
+  margin-inline-end: 4px; /* ריווח בין האייקון לטקסט */
+}
+.navbar .nav-link{
+  color: #4d5154;
+}
+.navbar-nav .nav-link.active{
+  color: #ffffff;
+}
+.navbar-toggler {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #4d5154;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* הפיכת האייקון ללבן */
+}
+
+/* אפקט מעבר חלק */
+.navbar .nav-item {
+  transition: transform 0.2s ease;
+}
+
+.navbar .nav-item:hover {
+  transform: scale(1.1); /* אפקט הגדלה */
+}
+
+.card:hover {
+  transform: scale(1.05); /* הגדלת הכרטיס */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* הצללה עדינה */
+  z-index: 10; /* מביא את הכרטיס לחזית */
+}
+/* תצוגה רספונסיבית לשורות הכרטיסים */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ריווח אחיד במרכז */
+  gap: 10px; /* ריווח בין הכרטיסיות */
+}
+/* תצוגת הכרטיסים במבנה Flexbox */
+#itemContainer {
+  display: flex;
+  flex-wrap: wrap; /* מאפשר מעבר לשורה הבאה */
+  justify-content: center; /* ריווח אחיד בין הכרטיסים */
+}
+
+.card.col-6 {
+  flex: 0 0 48%; /* כדי לשמור על 2 כרטיסים בשורה */
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/* במסכים קטנים, הכרטיסים יופיעו אחד מתחת לשני */
+@media (max-width: 768px) {
+  .card.col-6 {
+    width: 45%; /* מתאים לשני כרטיסים בשורה במסכים גדולים */
+    margin: 15px;
+    flex: 0 0 100%; /* כרטיס תופס שורה מלאה */
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 30%; /* שלושה כרטיסים בשורה במסכים רחבים */
+  }
+}
+
+/* כפתור ה-Learn More - שינוי צבע */
+.card a.btn:hover {
+  background-color: #2c3034; /* צבע רקע חדש */
+  color: white;
+  transform: scale(1.05);
+  font: bold 1rem "Roboto", sans-serif;
+}
+.card a.btn{
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #4d5154 ;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: gray; /* כוכב ריק */
+}
+
+.favorite-icon.filled {
+  color: gold; /* כוכב מלא */
+}
+#searchInput {
+  border: 2px solid #101214;
+  border-radius: 25px;
+  color: #fff;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+#searchInput:focus {
+  border-color: #4d5154;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.text-white.text-center{
+  padding: 1rem;
+}
+

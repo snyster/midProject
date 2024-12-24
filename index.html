@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>פלטפורמת פרומפטים</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+    <!-- JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+
+<body>
+<!-- Header with background image -->
+<header class=" text-white text-center" style="background-image: url('img/header.jpg');">
+    <h1>פלטפורמת פרומפטים</h1>
+</header>
+<!-- Navigation Bar (Hamburger Menu for mobile) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fas fa-home"></i>בית</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-info-circle"></i>אודות</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-envelope"></i>צור קשר</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Search Box -->
+<div class="my-5 text-center">
+    <input type="text" id="searchInput" class="bg-dark form-control w-50 mx-auto" placeholder="חפש לפי שם...">
+    
+</div>
+
+<!-- Cards Container -->
+<div class="container">
+    <div id="itemContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    </div>
+</div>
+</body>
+
+</html>
